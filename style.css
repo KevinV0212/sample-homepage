@@ -1,5 +1,6 @@
 :root{
-   --bg-color: 
+   --bg-color: ;
+   --basic-padding:15px;
 }
 /* CSS Reset Start */
 html {
@@ -108,7 +109,7 @@ header img {
 
 
 .header-body{
-   padding:30px;
+   padding:var(--basic-padding);
    box-shadow: 2px 2px 10px rgb(136, 136, 136);
 }
 
@@ -131,6 +132,13 @@ header img {
    }
 }
 
+section h1{
+   text-align: center;
+}
+.card {
+   padding: 15px;
+}
+
 .card-header{
    margin-bottom:10px;
 }
@@ -145,6 +153,10 @@ footer {
    gap:30px;   
 }
 
+footer section{
+   padding:15px;
+}
+
 footer img {
    max-width: 300px;
 }
@@ -157,8 +169,8 @@ footer img {
       justify-content:space-between
      
    }
-      footer img {
-         max-width: 350px;
-      }
+   footer img {
+      max-width: 350px;
+   }
 }
 
