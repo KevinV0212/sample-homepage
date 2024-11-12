@@ -50,41 +50,29 @@ body{
    align-items:center;
 }
 
-@media (min-width: 640px) {
-   body{
-      padding: 60px;
-   }
-}
 
 
-main{
-   max-width: 1000px;
+header {
    display: flex;
    flex-direction: column;
    align-items: center;
-   margin-bottom:80px;
+   gap: 30px;
+   padding: var(--basic-padding);
 }
 
-header{
-   display:flex;
-   flex-direction:column;
-   align-items:center;
-   gap:30px;
-   padding: var(--basic-padding);
-   margin-bottom:80px
-}
 header img {
    max-width: 300px;
    object-fit: cover;
 }
 
 @media (min-width: 640px) {
-   header{
-      display:block;
+   header {
+      display: block;
    }
+
    header img {
-      max-width:250px;
-      margin-right:15px;
+      max-width: 250px;
+      margin-right: 15px;
       float: left;
       box-shadow: var(--basic-shadow);
       transform-origin: right bottom;
@@ -94,16 +82,15 @@ header img {
 
 @media (min-width: 1024px) {
    header {
-      display:flex;
-      flex-direction:row;
+      display: flex;
+      flex-direction: row;
       max-width: 1000px;
       gap: 30px;
-      margin-bottom: 60px
-      
    }
+
    header img {
       max-width: 350px;
-      margin:0 0;
+      margin: 0 0;
       float: none;
       box-shadow: var(--basic-shadow);
       transform-origin: left;
@@ -112,10 +99,18 @@ header img {
 }
 
 
-.header-body{
-   padding:var(--basic-padding);
+.header-body {
+   padding: var(--basic-padding);
    box-shadow: var(--basic-shadow);
 }
+
+main{
+   max-width: 1200px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
 
 .card-grid {
    display: grid;
@@ -172,15 +167,18 @@ section h1{
 }
 
 footer {
-   max-width:1000px;
    width:100%;
-   display:flex;
+   background-color:var(--secondary);
+}
+.footer-container{
+   display: flex;
    flex-direction: column;
-   align-items:center;
-   gap:30px;   
+   align-items: center;
+   gap: 30px;
 }
 
 footer section{
+   max-width:600px;
    padding:15px;
 }
 
@@ -189,11 +187,14 @@ footer img {
 }
 
 @media (min-width:640px) {
-   footer {
+   .footer-container{
       display:flex;
       flex-direction:row;
       align-items: start;
-      justify-content:space-between
+      justify-content:center;
+      gap:50px;
+      margin: 0 auto;
+      max-width: 1000px;
      
    }
    footer img {
@@ -201,3 +202,11 @@ footer img {
    }
 }
 
+@media (min-width:640px) {
+
+   header,
+   main,
+   footer {
+      padding: 50px;
+   }
+}
