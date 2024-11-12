@@ -6,6 +6,16 @@
    --basic-padding:15px;
    --basic-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+@font-face {
+   font-family: "Talleyrand";
+   src: url(./assets/fonts/talleyrand.woff) format("woff"),
+      url(./assets/fonts/talleyrand.woff2) format("woff2"),
+   url(./assets/fonts/talleyrand.ttf) format("truetype");
+}
+@font-face {
+   font-family: "Metamorphous";
+   src: url(./assets/fonts/Metamorphous-Regular.ttf) format("truetype");
+}
 /* CSS Reset Start */
 html {
    box-sizing: border-box;
@@ -43,14 +53,48 @@ img {
 }
 
 /* CSS Reset End */
+html {
+   font-size: 14px;
+}
 
+@media (min-width: 640px){
+   html{
+      font-size: 16px;
+   }
+}
 body{
    display:flex;
    flex-direction: column;
    align-items:center;
+   font-family: "Metamorphous";
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: "Talleyrand", serif;
+}
 
+p {
+   line-height: 1.5rem;
+}
+
+header,
+main{
+   padding: 50px 0;
+}
+
+@media (min-width:640px) {
+
+   header,
+   main,
+   footer {
+      padding: 50px;
+   }
+}
 
 header {
    display: flex;
@@ -104,6 +148,13 @@ header img {
    box-shadow: var(--basic-shadow);
 }
 
+.header-body > * {
+   margin-bottom:20px;
+}
+
+.header-body > h1{
+   font-size: 3rem;
+}
 main{
    max-width: 1200px;
    display: flex;
@@ -132,7 +183,8 @@ main{
    }
 }
 
-section h1{
+section > h1{
+   font-size: 3rem;
    text-align: center;
 }
 .card {
@@ -160,13 +212,17 @@ section h1{
    padding:15px;
    background-color: var(--secondary);
 }
-.card-header{
+.card-header > h2{
    display:flex;
    justify-content:space-between;
    margin-bottom:10px;
+   font-size: 2rem;
 }
 
 footer {
+   display: flex;
+   justify-content:center;
+   align-items:center;
    width:100%;
    background-color:var(--secondary);
 }
@@ -174,12 +230,15 @@ footer {
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap: 30px;
 }
 
 footer section{
    max-width:600px;
    padding:15px;
+}
+
+footer section > * {
+   margin-bottom:10px;
 }
 
 footer img {
@@ -190,23 +249,13 @@ footer img {
    .footer-container{
       display:flex;
       flex-direction:row;
-      align-items: start;
+      align-items: center;
       justify-content:center;
       gap:50px;
-      margin: 0 auto;
       max-width: 1000px;
      
    }
    footer img {
       max-width: 350px;
-   }
-}
-
-@media (min-width:640px) {
-
-   header,
-   main,
-   footer {
-      padding: 50px;
    }
 }
