@@ -2,9 +2,9 @@
    --primary: whitesmoke;
    --secondary: #CA8D4B;
    --accent:;
-
+   --off-white:rgb(243, 243, 243);
    --basic-padding:15px;
-   --basic-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   --basic-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 @font-face {
    font-family: "Talleyrand";
@@ -67,6 +67,7 @@ body{
    flex-direction: column;
    align-items:center;
    font-family: "Metamorphous";
+  
 }
 
 h1,
@@ -82,26 +83,30 @@ p {
    line-height: 1.5rem;
 }
 
-header,
-main{
+main {
    padding: 50px 0;
 }
-
 @media (min-width:640px) {
-
    header,
    main,
    footer {
       padding: 50px;
+      width:100%;
    }
 }
 
 header {
+   background-color: var(--secondary);
+   width:100%;
+}
+.header-wrapper {
+   margin: 0 auto;
+   max-width:1000px;
    display: flex;
    flex-direction: column;
    align-items: center;
    gap: 30px;
-   padding: var(--basic-padding);
+   
 }
 
 header img {
@@ -110,7 +115,7 @@ header img {
 }
 
 @media (min-width: 640px) {
-   header {
+   .header-wrapper {
       display: block;
    }
 
@@ -125,10 +130,9 @@ header img {
 }
 
 @media (min-width: 1024px) {
-   header {
+   .header-wrapper {
       display: flex;
       flex-direction: row;
-      max-width: 1000px;
       gap: 30px;
    }
 
@@ -146,6 +150,7 @@ header img {
 .header-body {
    padding: var(--basic-padding);
    box-shadow: var(--basic-shadow);
+   background-color: var(--off-white);
 }
 
 .header-body > * {
@@ -156,14 +161,28 @@ header img {
    font-size: 3rem;
 }
 main{
-   max-width: 1200px;
+   position:relative;
    display: flex;
    flex-direction: column;
    align-items: center;
 }
-
+main::before {
+   content:"";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0.5;
+   background: url("./assets/img/bg.jpg");
+   background-size: cover;
+   background-position: center 10%;
+   background-repeat: no-repeat;
+   z-index: -1;
+}
 
 .card-grid {
+   max-width: 1200px;
    display: grid;
    grid-template-columns: repeat(1, 1fr);
    gap: 30px;
@@ -188,6 +207,7 @@ section > h1{
    text-align: center;
 }
 .card {
+   overflow:hidden;
    display: flex;
    flex-direction: column;
    box-shadow: var(--basic-shadow);
@@ -205,6 +225,9 @@ section > h1{
    max-height: 100%;
    width: 100%;
    object-fit:cover;
+}
+.card > .img-wrapper {
+   background-color: rgba(255, 255, 255, 0.507);
 }
 
 .card-content{
