@@ -4,24 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <img src="./assets/img/portrait.jpg" alt="Kraft Lawrence" />
-      <div class="header-body">
-        <h1>About Me</h1>
-        <p>
-          I have traveled across the breadth and length of the world as a
-          merchant. From the high seas to the sprawling countryside, I have seen
-          it all. During my travels, I have acquired a large and varied
-          collection of goods and am always on the look for potential customers.
-        </p>
-        <ul>
-          <li><a href="">Rowen Guild Page</a></li>
-          <li><a href="">Online Store</a></li>
-          <li><a href="">Social Media</a></li>
-        </ul>
+      <div class="header-wrapper">
+        <img src="./assets/img/portrait.jpg" alt="Kraft Lawrence" />
+        <div class="header-body">
+          <h1>About Me</h1>
+          <p>
+            I have traveled across the breadth and length of the world as a
+            merchant. From the high seas to the sprawling countryside, I have
+            seen it all. During my travels, I have acquired a large and varied
+            collection of goods and am always on the look for potential
+            customers.
+          </p>
+          <ul>
+            <li>
+              <a href="" class="icon-text"
+                ><span class="mdi mdi-domain"></span>Rowen Guild Page
+              </a>
+            </li>
+            <li>
+              <a href="" class="icon-text"
+                ><span class="mdi mdi-store"></span>Online Store
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -39,7 +53,7 @@
             <div class="card-content">
               <div class="card-header">
                 <h2 class="card-title">Marten Pelts</h2>
-                <a href="">Open in new Tab</a>
+                <a href=""><span class="mdi mdi-store"></span></a>
               </div>
               <div class="card-body">
                 <p class="card-text">
@@ -63,7 +77,7 @@
             <div class="card-content">
               <div class="card-header">
                 <h2 class="card-title">wheat</h2>
-                <a href="">Open in new Tab</a>
+                <a href=""><span class="mdi mdi-store"></span></a>
               </div>
               <div class="card-body">
                 <p class="card-text">
@@ -86,7 +100,7 @@
             <div class="card-content">
               <div class="card-header">
                 <h2 class="card-title">Apples</h2>
-                <a href="">Open in new Tab</a>
+                <a href=""><span class="mdi mdi-store"></span></a>
               </div>
               <div class="card-body">
                 <p class="card-text">
@@ -106,7 +120,7 @@
             <div class="card-content">
               <div class="card-header">
                 <h2 class="card-title">Pepper</h2>
-                <a href="">Open in new Tab</a>
+                <a href=""><span class="mdi mdi-store"></span></a>
               </div>
               <div class="card-body">
                 <p class="card-text">
@@ -127,7 +141,7 @@
             <div class="card-content">
               <div class="card-header">
                 <h2 class="card-title">Armor</h2>
-                <a href="">Open in new Tab</a>
+                <a href=""><span class="mdi mdi-store"></span></a>
               </div>
               <div class="card-body">
                 <p class="card-text">
@@ -150,7 +164,7 @@
             <div class="card-content">
               <div class="card-header">
                 <h2 class="card-title">Iron Pyrite</h2>
-                <a href="">Open in new Tab</a>
+                <a href=""><span class="mdi mdi-store"></span></a>
               </div>
               <div class="card-body">
                 <p class="card-text">
@@ -174,11 +188,32 @@
             to any branch of the Rowen Merchant's Association. I greatly look
             forward to conducting business with you.
           </p>
-          <br />
-          <h2>Next Destination:</h2>
-          <p>1234 Random Road Random Town, California 12345</p>
-          <a href="tel">555-555-5555</a>
-          <p href="mailto: kraftlawrence@email.com">kraftlawrence@email.com</p>
+          <ul class="info-list">
+            <li class="info-item">
+              <h2>Departing From</h2>
+              <p class="icon-text">
+                <span class="mdi mdi-map-marker-remove-variant"></span> Tereo
+              </p>
+            </li>
+            <li class="info-item">
+              <h2>Heading Towards</h2>
+              <p class="icon-text">
+                <span class="mdi mdi-map-marker"></span>Lenos
+              </p>
+            </li>
+            <li class="info-item">
+              <h2>Carrier Pigeon Num.</h2>
+              <a href="tel" class="icon-text"
+                ><span class="mdi mdi-bird"></span>48,299</a
+              >
+            </li>
+            <li class="info-item">
+              <h2>Rowen Mail Num.</h2>
+              <a href="tel" class="icon-text"
+                ><span class="mdi mdi-mailbox"></span> 231</a
+              >
+            </li>
+          </ul>
         </section>
         <img src="./assets/img/key_visual.jpg" alt="promotional poster" />
       </div>
